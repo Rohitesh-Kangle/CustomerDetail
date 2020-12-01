@@ -1,0 +1,51 @@
+﻿@model ClientDetail.Models.CustomerInformation
+ 
+<h4>Are you sure you want to deactivate this customer?</h4>
+<div>
+     
+    @using (Html.BeginForm("Delete", "Customer", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <dl class="dl-horizontal">
+            @Html.HiddenFor(model => model.CustID)           
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.LabelFor(model => model.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+
+        </dl>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
