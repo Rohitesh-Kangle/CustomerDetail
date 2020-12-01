@@ -20,4 +20,4 @@ To Execute application please download both the application.
 Note: if possible run both application with administrator rights. 
 
 Please find below git link to download CustomerWebAp.
-git clone https://github.com/Rohitesh-Kangle/CustomerWebApi.git
+https://github.com/Rohitesh-Kangle/CustomerWebApi.git
